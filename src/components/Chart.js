@@ -7,12 +7,14 @@ let tableRowsData = [
         producto: '',
         marca: '',        
         categoria: [''],
+        descripcion: '',
         precio: ""
     },
     {
         producto: '',
         marca: '',        
         categoria: [''],
+        descripcion: '',
         precio: ""
     },
     
@@ -41,11 +43,11 @@ let callApi = (url, consecuencia) => {
     let temporalData = data.products.map((p)=> 
     {        
         return {                        
-            titulo : p.title,
-            marca: p["brand.name"],
+            titulo : p.name,
+            marca: p.brand,
             descripcion : p.description,
             precio : p.price,
-            categorias : [p["productgender.name"]]
+            category : p.category
         }
     })       
     setProductsList(temporalData);
