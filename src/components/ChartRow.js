@@ -6,14 +6,7 @@ function ChartRow(props){
                     <td>{props.titulo}</td>
                     <td>{props.marca}</td>
                     <td>{props.descripcion}</td>                    
-                    <td>
-                        <ul>
-                            {
-                             props.categorias?props.categorias.map( (category,i) => 
-                                <li key={`categoria ${i}`}>{category}</li>
-                            ):""}
-                        </ul>
-                    </td>                              
+                    <td>{props.categoria}</td>                              
                     <td>$ {props.precio}</td>
                 </tr>
             )

@@ -6,14 +6,14 @@ let tableRowsData = [
     {
         producto: '',
         marca: '',        
-        categoria: [''],
+        categoria: '',
         descripcion: '',
         precio: ""
     },
     {
         producto: '',
         marca: '',        
-        categoria: [''],
+        categoria: '',
         descripcion: '',
         precio: ""
     },
@@ -47,7 +47,7 @@ let callApi = (url, consecuencia) => {
             marca: p.brand,
             descripcion : p.description,
             precio : p.price,
-            category : p.category
+            categoria : p.category
         }
     })       
     setProductsList(temporalData);
